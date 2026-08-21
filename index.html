@@ -24,8 +24,7 @@
     .btn { background: #e11d48; color: white; border: none; padding: 12px 28px; border-radius: 20px; font-size: 0.95rem; font-weight: 600; cursor: pointer; margin-top: 25px; transition: background 0.2s; }
     .btn:hover { background: #be123c; }
 
-    .photo-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 20px; }
-    .photo-gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; }
+    .single-photo { width: 100%; max-height: 380px; object-fit: contain; border-radius: 12px; margin-top: 10px; }
   </style>
 </head>
 <body>
@@ -64,21 +63,46 @@ And the way you carry the conversations 🥰</div>
       <button class="btn" onclick="nextStep(5)">Next ✨</button>
     </div>
 
-    <!-- Step 5: Photo Gallery -->
+    <!-- Step 5: Photo 1 -->
     <div id="step5" class="step">
       <div class="letter-header">Memories 📸</div>
-      <div class="photo-gallery">
-        <img src="1785619536400.png" alt="Photo 1">
-        <img src="892d4f33d6900f2d.png" alt="Photo 2">
-        <img src="Untitled design.png" alt="Photo 3">
-        <img src="c7e3f7cb3915a37e.png" alt="Photo 4">
-      </div>
-    </div>      <div class="photo-gallery">
-        <img src="1785619536400.png" alt="Photo 1">
-        <img src="EXACT_NAME_OF_PHOTO_2.png" alt="Photo 2">
-        <img src="Untitled design.png" alt="Photo 3">
-        <img src="EXACT_NAME_OF_PHOTO_4.png" alt="Photo 4">
+      <img src="1785619536400.png" class="single-photo" alt="Photo 1">
+      <button class="btn" onclick="nextStep(6)">Next ✨</button>
     </div>
+
+    <!-- Step 6: Photo 2 -->
+    <div id="step6" class="step">
+      <div class="letter-header">Memories 📸</div>
+      <img src="892d4f33d6900f2d.png" class="single-photo" alt="Photo 2">
+      <button class="btn" onclick="nextStep(7)">Next ✨</button>
+    </div>
+
+    <!-- Step 7: Photo 3 -->
+    <div id="step7" class="step">
+      <div class="letter-header">Memories 📸</div>
+      <img src="Untitled design.png" class="single-photo" alt="Photo 3">
+      <button class="btn" onclick="nextStep(8)">Next ✨</button>
+    </div>
+
+    <!-- Step 8: Photo 4 -->
+    <div id="step8" class="step">
+      <div class="letter-header">Memories 📸</div>
+      <img src="c7e3f7cb3915a37e.png" class="single-photo" alt="Photo 4">
+      <div style="margin-top: 20px; font-size: 1.1rem; font-weight: 600; color: #e11d48;">
+        Have the happiest birthday! 🎉
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function nextStep(stepNumber) {
+      document.querySelectorAll('.step').forEach(el => el.classList.remove('active'));
+      document.getElementById('step' + stepNumber).classList.add('active');
+    }
+  </script>
+</body>
+</html>
+</div>
     
   </div>
 
