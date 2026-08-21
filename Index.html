@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Zohaib!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+    body { background-color: #f7f8fa; color: #333; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    .card-container { width: 100%; max-width: 550px; background: #fff; border-radius: 16px; padding: 25px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); text-align: center; }
+    
+    .envelope-card { background: #fff1f2; border: 2px solid #ffe4e6; border-radius: 12px; padding: 50px 20px; cursor: pointer; transition: transform 0.2s; }
+    .envelope-card:hover { transform: scale(1.02); }
+    .envelope-title { font-family: 'Caveat', cursive; font-size: 2.5rem; color: #e11d48; margin-bottom: 8px; }
+    .tap-btn { background: #e11d48; color: white; padding: 10px 22px; border-radius: 20px; font-size: 0.9rem; display: inline-block; margin-top: 18px; font-weight: 600; }
+
+    #revealedLetter { display: none; text-align: left; }
+    .letter-header { font-family: 'Caveat', cursive; font-size: 2.2rem; color: #e11d48; text-align: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+    .section-block { margin-bottom: 22px; }
+    .section-title { font-size: 0.75rem; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .section-text { font-size: 0.95rem; color: #444; white-space: pre-line; line-height: 1.6; }
+
+    .photo-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 20px; }
+    .photo-gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+    <div id="closedEnvelope" class="envelope-card" onclick="openLetter()">
+      <div class="envelope-title">To Zohaib</div>
+      <div style="color: #666; font-size: 0.95rem;">From Jennie</div>
+      <div class="tap-btn">Tap to open ✨</div>
+    </div>
+
+    <div id="revealedLetter">
+      <div class="letter-header">Happy Birthday! 🎂</div>
+
+      <div class="section-block">
+        <div class="section-title">Your main message</div>
+        <div class="section-text">Happy birthday dear zohaib,
+You've been such a good friend to me. Im so grateful for that, you're an amazing person a beautiful soul and I wish you all the best for your life ahead, God bless you with all the beautiful things and happiness you deserve. I wish you happiness, joy, health and prosperity. Seeing you grow into someone so kind makes me truly happy. Once again happy birthday 🎂🤍</div>
+      </div>
+
+      <div class="section-block">
+        <div class="section-title">What I Love Most About You</div>
+        <div class="section-text">Your ability to listen to my yapping
+Your extraordinary zabi vocabulary 🤧
+Your great sense of humor
+And the way you carry the conversations 🥰</div>
+      </div>
+
+      <div class="section-block">
+        <div class="section-title">Dreams Together</div>
+        <div class="section-text">I don't know.. if we ever had dreams together but I just hope all your dreams and wishes come true And I genuinely... From the depth of my heart Want you to be happy and peaceful. ❤️</div>
+      </div>
+
+      <div class="photo-gallery">
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Cute bunny">
+        <img src="https://images.unsplash.com/photo-1532693322450-2cb5c511067d?auto=format&fit=crop&w=600&q=80" alt="Full Moon">
+        <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=600&q=80" alt="White Roses">
+        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=600&q=80" alt="Birthday Card">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openLetter() {
+      document.getElementById('closedEnvelope').style.display = 'none';
+      document.getElementById('revealedLetter').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
